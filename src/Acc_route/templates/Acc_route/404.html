@@ -1,0 +1,18 @@
+{% extends 'Acc_route/home/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Erreur 404</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    {% block content %}
+    <div>
+        <p id="error">404</p>
+        <p id="message">Page introuvable </p>
+    </div>
+    {% endblock %}
+</body>
+</html>

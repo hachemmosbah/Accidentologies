@@ -1,0 +1,75 @@
+{% extends 'Acc_route/home/base.html' %}
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" /> -->
+  <title>DATA VISE</title>
+</head>
+<body>
+  {% block content %}
+  {% csrf_token %}
+  <h2>Voici une analyse des accidents de la route </h2><br />
+  <section class="global">
+    <article class="zone1">
+      <h4>Veuillez remplir le formulaire :</h4><br />
+      <div> <!-- tag year -->
+        <form class= "year" action ="/dashboard/"  method="POST">
+        {% csrf_token %}
+        <label for="year" type = text>Choisir une Année :</label>
+        <input id="year" type="text" name="year" value="{{ year }}" >
+
+        <ul>
+        <!-- {% for error in form.year.errors %}
+          <li>{{ error }}</li>
+        {% endfor %} -->
+        </ul> 
+        <div>
+          <label for="age1" type = "text" >Choisir un âge :</label>
+          <input id="age1" type="text" name="age1" value="{{ age1 }}">
+        
+        <label for="age2" type = "text">et </label> <!--  -->
+        <input id="age2" type="text" name="age2" value="{{ age2 }}">
+        
+        </div> <br/>
+        <div class = gravity><!-- cheackbox gravity -->
+          Cochez une ou plusieurs cases pour la gravité de l'accident : <br/> 
+          <input type="checkbox" name="unhurt" value="1" id = 'unhurt' /> Indemnes<label for = 'unhurt'></label><br/>
+          <input type="checkbox" name="dead" value="2" id = 'dead' /> Décédes<label for ='dead'></label><br/>
+          <input type="checkbox" name="hospitalized" value="3" id= 'hospitalized'  /> Blessés hospitalisés<label for = 'hospitalized'></label><br/>
+          <input type="checkbox" name="hurt_light" value="4" id = 'hurt_light' /> Blessés légers<label for = 'hurt_light'></label><br/>
+        </div><br />
+        <div class = gender> <!-- cheackbox gender -->
+
+          Cochez une ou plusieurs cases pour le sexe de l'usager : <br/> 
+        
+          <input type="checkbox" name="men" value="1" id = 'men' /> Hommes<label for = 'men'></label><br/>
+          <input type="checkbox" name="women" value="2" id = 'women' /> Femmes<label for ='women'></label><br/>
+        </div><br />
+
+        <div class= 'departement_div' >
+          <label for="departement">Départements : </label> <!-- dropdown list departement-->
+          <select class="departement" name = departement id="departement">
+            <option disabled selected value>Département</option>
+           
+            {% for list_code_departement, list_nom_departement in departement %}
+              <option value={{ list_code_departement }}> {{ list_nom_departement }}</option>
+             
+            {% endfor %}
+            
+            </select>
+          </div>
+        <p> <input type="submit" value="Envoyer" /> </p> <!-- submit button -->
+      </form>
+    </div>
+    </article>
+    <article class="zone2">
+        <img  src="{% static 'css/images/suraccident.jpg' %}" alt="accident" />
+    </article>
+</section>
+
+</body>
+</html>
+{% endblock %}
