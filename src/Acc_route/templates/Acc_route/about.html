@@ -1,0 +1,35 @@
+{% extends 'Acc_route/home/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>A propos</title>
+</head>
+<body>
+    {% block content %}
+    <div>
+        <h1>A propos</h1>
+        </br>
+        <div> 
+            <p id="text1">
+            Accidentologie est un site de prévention des accidents de la route. 
+            Ce site a pour but de prévenir les accidents de la route, il y as deux parites
+            une parite visualisation et une parite prediction.
+            </p>
+            </br>
+            <h4 id="text2">Histoire : </h4>
+            </br>
+            <p id="text3">
+            Au debut des années 2019 j'ai étudier la data en suite l'intelligence artificielle
+            j'ai décidé de créer ce site pour la prévention des accidents de la route. En 
+            utilisent l'IA pour la prédiction des accidents futures on se basent sur les données
+            passé.
+            </p>     
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

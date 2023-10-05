@@ -30,5 +30,6 @@ urlpatterns = [
     path("data_pred/", data_predict, name="data_pred"),
     path("prediction/", predict, name="prediction"),
     path("404/", error_404, name="error_404"),
+    path("about/", about, name="about"),
     path("admin/", admin.site.urls),
 ]

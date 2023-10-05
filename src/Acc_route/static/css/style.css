@@ -24,10 +24,11 @@ nav{
 }
 
 .navbar-end{
-    width: 30vw;
+    width: 35vw;
     display: flex;
     justify-content: space-around;
     padding-top: 1vh;
+    
 }
 
 .navbar-end a{
@@ -45,8 +46,9 @@ nav{
     display: flex;
     justify-content: space-around;
     padding-top: 10vh;
+   
 } 
-.navbar-end1 a:nth-child(1), .navbar-end1 a:nth-child(2), .navbar-end1 a:nth-child(3), .navbar-end1 a:nth-child(4), .navbar-end1 a:nth-child(5){
+.navbar-end1 a:nth-child(1), .navbar-end1 a:nth-child(2), .navbar-end1 a:nth-child(3), .navbar-end1 a:nth-child(4), .navbar-end1 a:nth-child(5), .navbar-end1 a:nth-child(6){
     margin-top: 0.65vh;
 }
 .navbar-end a:hover{
@@ -300,4 +302,29 @@ input[type=submit]{
     text-align: center;
     font-size: 3vh;
     
+}
+.users{
+    margin-top: -0.5vh;
+   
+}
+
+.footer{
+    text-align: center;
+}
+#text1{
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+#text2{
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 8.5vw;
+}
+#text3{
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 6.7vw;
+    margin-right: 6vw;
 }
