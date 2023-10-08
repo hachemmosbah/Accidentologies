@@ -2,7 +2,6 @@ from django.shortcuts import redirect, render
 import pandas as pd
 from Acc_route.data_vis import *
 from Acc_route.models import *
-# from django.urls import reverse
 
 
 def index(request):
