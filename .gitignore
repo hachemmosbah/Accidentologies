@@ -6,3 +6,8 @@ src/Acc_route/__pycache__
 src/Acc_route/data/.DS_Store
 src/Acc_route/migrations/__pycache__
 src/Acc_route/static/css/.DS_Store
+.env/
+.env
+db.sqlite3
+__pycache__/
+
