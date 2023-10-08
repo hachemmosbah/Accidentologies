@@ -145,7 +145,8 @@ def plot_carte_loc():
     return graphJSON
 
 def prediction(year, gender, age, localisation, intersection, lumiere, departement):  
-    rfc = load('Acc_route/data/rfc1_prediction.joblib')
+    files = 'Acc_route/data/rfc1_prediction_1.joblib' + 'Acc_route/data/rfc1_prediction_2.joblib' + 'Acc_route/data/rfc1_prediction_3.joblib' + 'Acc_route/data/rfc1_prediction_4.joblib' 
+    rfc = load(files)
     X = [[year, gender, age, localisation, intersection, lumiere, departement]]
     pred = rfc.predict_proba(X)
     if pred[0][0] > pred[0][1]:

@@ -78,9 +78,8 @@ def graphique(year, departement,age1, age2):
 def error_404(request):
     return render(request, 'Acc_route/404.html')
 
-# def save_data():
-#     data = DataForm()
-#     data.save()
+def about(request):
+    return render(request, 'Acc_route/about.html')
 
 
 def dashboard(request):
