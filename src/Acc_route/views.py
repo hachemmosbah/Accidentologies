@@ -159,4 +159,3 @@ def predict(request):
         form = DataPred() 
 
     return render(request, "Acc_route/data_pred.html", {"form": form})
-        
